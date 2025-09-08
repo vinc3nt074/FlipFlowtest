@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlipFlow — Optimieren</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="brand"><div class="logo"></div> <span>FlipFlow</span></div>
+      <div class="menu">
+        <a class="btn ghost" href="dashboard.html">Zurück</a>
+        <span class="badge" id="userBadge">…</span>
+      </div>
+    </nav>
+
+    <div class="card glow" style="max-width:720px;margin:20px auto">
+      <h2>Listing optimieren</h2>
+      <form class="form" id="flipForm">
+        <label>Produktname*<input type="text" id="productName" required /></label>
+        <div class="row">
+          <div>
+            <label>Kategorie
+              <select id="category">
+                <option>Sneaker</option>
+                <option>Elektronik</option>
+                <option>Fashion</option>
+                <option>Sonstiges</option>
+              </select>
+            </label>
+          </div>
+          <div>
+            <label>Wunschpreis (€)<input type="number" id="targetPrice" min="0" step="0.01" /></label>
+          </div>
+        </div>
+        <label>Beschreibung<textarea id="description" placeholder="Zustand, Zubehör, Standort …"></textarea></label>
+        <p class="status" id="quotaInfo"></p>
+        <button type="submit" id="submitBtn">Anfrage senden</button>
+        <p class="status" id="status"></p>
+      </form>
+    </div>
+  </div>
+  <script>
+    window.API_URL = "https://script.google.com/macros/s/AKfycbztC8FG-GYBAGBmlvjpVqhxJB2MQYaMv6z7akpmJY4IkPzf0xficmYvea2nZIjIp0kM2g/exec";
+  </script>
+  <script src="optimize.js"></script>
+</body>
+</html>

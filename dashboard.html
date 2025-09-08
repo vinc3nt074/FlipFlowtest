@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlipFlow — Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="brand"><div class="logo"></div> <span>FlipFlow</span></div>
+      <div class="menu">
+        <span class="badge" id="userBadge">…</span>
+        <a class="btn danger" id="logoutBtn">Logout</a>
+      </div>
+    </nav>
+
+    <section class="grid">
+      <div class="card glow">
+        <h2>Übersicht</h2>
+        <p class="lead">Dein aktuelles Free‑Kontingent für Optimierungen:</p>
+        <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+          <div class="kpi">
+            <span class="num" id="remaining">–</span>
+            <span class="muted">verbleibend</span>
+          </div>
+          <div class="kpi">
+            <span class="num" id="used">–</span>
+            <span class="muted">verbraucht (von 1)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>KI‑Verbesserung für Listings</h3>
+        <p class="lead">Titel‑Boost, Tipps & einfache Preisempfehlung per E‑Mail.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn" id="goOptimize">Jetzt optimieren</a>
+          <span class="badge" id="limitBadge">Limit: 1×/E‑Mail</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Demnächst</h3>
+        <p class="lead">Weitere Tools folgen – Alerts, Preisverlauf, Auto‑Posting …</p>
+      </div>
+    </section>
+
+    <p class="footer">© 2025 FlipFlow</p>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+</html>
