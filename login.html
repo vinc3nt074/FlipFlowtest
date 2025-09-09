@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FlipFlow — Login</title>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlipFlow — Login/Registrierung</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container">
     <nav class="nav">
-      <div class="brand"><div class="logo"></div> <span>FlipFlow</span></div>
-      <div class="menu"><a class="btn ghost" href="index.html">Zurück</a></div>
+      <div class="brand"><div class="logo"></div><span>FlipFlow</span></div>
+      <div><a class="btn" href="dashboard.html">Dashboard</a></div>
     </nav>
 
-    <div class="card glow" style="max-width:560px;margin:20px auto">
-      <h2>Login</h2>
-      <p class="lead">Melde dich mit deiner E‑Mail an. Wir speichern nichts außer dem lokalen Zähler für dein Free‑Kontingent.</p>
-      <form class="form" id="loginForm">
-        <label>E‑Mail-Adresse*</label>
-        <input type="email" id="email" required placeholder="du@example.com" />
-        <button type="submit">Einloggen</button>
-        <p class="status" id="status"></p>
-      </form>
+    <div class="grid">
+      <div class="card">
+        <h2>Anmelden</h2>
+        <form class="form" id="loginForm">
+          <label>E-Mail</label>
+          <input type="email" id="loginEmail" required />
+          <label>Passwort</label>
+          <input type="password" id="loginPassword" required />
+          <button class="btn" type="submit">Login</button>
+          <p class="status" id="loginStatus"></p>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Registrieren</h2>
+        <form class="form" id="registerForm">
+          <label>E-Mail</label>
+          <input type="email" id="regEmail" required />
+          <label>Passwort</label>
+          <input type="password" id="regPassword" required />
+          <button class="btn" type="submit">Konto erstellen</button>
+          <p class="status" id="regStatus"></p>
+        </form>
+      </div>
     </div>
   </div>
-  <script src="login.js"></script>
+  <script>
+    window.API_URL = "https://script.google.com/macros/s/AKfycbztC8FG-GYBAGBmlvjpVqhxJB2MQYaMv6z7akpmJY4IkPzf0xficmYvea2nZIjIp0kM2g/exec";
+  </script>
+  <script src="login.js?v=1"></script>
 </body>
 </html>
